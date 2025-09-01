@@ -4,7 +4,7 @@
  * Plugin Name: Disable Cart Fragments
  * Plugin URI: https://wordpress.org/plugins/disable-cart-fragments/
  * Description: A better way to disable WooCommerce's cart fragments script, and re-enqueue it when the cart is updated. Works with all caching plugins.
- * Version: 2.4
+ * Version: 2.4.1
  * Author: Optimocha
  * Author URI: https://optimocha.com/
  * License: GPL v3
@@ -76,7 +76,7 @@ if ( ! class_exists( 'Optimocha_Disable_Cart_Fragments' ) ) {
 
 			?>
 			<div class="notice notice-error">
-				<p><?php _e( "We detected that you're already using another plugin of ours: Speed Booster Pack. Since SBP already has the same \"Disable cart fragments\" feature, you can safely deactivate the Disable Cart Fragments plugin and keep using Speed Booster Pack! :)", disable-cart-fragments ); ?>
+				<p><?php _e( "We detected that you're already using another plugin of ours: Speed Booster Pack. Since SBP already has the same \"Disable cart fragments\" feature, you can safely deactivate the Disable Cart Fragments plugin and keep using Speed Booster Pack! :)", 'disable-cart-fragments' ); ?>
 				</p>
 			</div>
 			<?php
@@ -139,7 +139,7 @@ if ( ! class_exists( 'Optimocha_Disable_Cart_Fragments' ) ) {
         	if( ! current_user_can( 'manage_options' ) ) return false;
 
             new \DCF\DCF_Notice_Manager();
-            \DCF\DCF_Notice_Manager::display_notice( 'dcf_pro_service', '<p><a href="https://optimocha.com/?ref=disable-cart-fragments" target="_blank">' . __( "If you need any help optimizing your website speed, if you're ready to <em>invest in</em> speed optimization, you can visit Optimocha.com by clicking here, and have us speed up your site!", disable-cart-fragments ) . '</a></p>', 'info' );
+            \DCF\DCF_Notice_Manager::display_notice( 'dcf_pro_service', '<p><a href="https://optimocha.com/?ref=disable-cart-fragments" target="_blank">' . __( "If you need any help optimizing your website speed, if you're ready to <em>invest in</em> speed optimization, you can visit Optimocha.com by clicking here, and have us speed up your site!", 'disable-cart-fragments' ) . '</a></p>', 'info' );
 		}
 	}
 
